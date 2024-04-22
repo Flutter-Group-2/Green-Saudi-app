@@ -97,6 +97,7 @@ class BottomNavBar extends StatelessWidget {
                           navItems[index]['icon'],
                           width: context.getWidth() * .056,
                           height: context.getWidth() * .056,
+                          // ignore: deprecated_member_use
                           color: index == navCubit.selectIndex
                               ? green
                               : Theme.of(context)

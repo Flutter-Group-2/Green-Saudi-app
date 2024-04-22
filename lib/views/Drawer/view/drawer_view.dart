@@ -25,11 +25,11 @@ class DrawerScreen extends StatelessWidget {
         Uri.parse('https://www.greeninitiatives.gov.sa/ar-sa/sgi-initiatives/');
     final Uri url1 =
         Uri.parse('https://www.greeninitiatives.gov.sa/ar-sa/about-sgi/');
-    final Uri urlTwiter = Uri.parse('https://twitter.com/gi_saudi');
+    final Uri urlTwitter = Uri.parse('https://twitter.com/gi_saudi');
     final Uri urlFacebook =
         Uri.parse('https://www.facebook.com/SaudiGreenInitiative');
     final Uri urlInstagram = Uri.parse('https://www.instagram.com/gi_saudi/');
-    final Uri urlYoutub =
+    final Uri urlYoutube =
         Uri.parse('hhttps://www.greeninitiatives.gov.sa/ar-sa/about-sgi/#');
     final serviceLocator = DataInjection().locator.get<DBServices>();
     final user = serviceLocator.user;
@@ -75,7 +75,7 @@ class DrawerScreen extends StatelessWidget {
                           ),
                     width16,
                     Text(
-                      user.name ?? "مرحبا بك",
+                      user.name ?? AppLocale.welcome.getString(context),
                       style: TextStyle(
                         color: pureWhite,
                         fontWeight: FontWeight.bold,
@@ -245,8 +245,8 @@ class DrawerScreen extends StatelessWidget {
                         )),
                     IconButton(
                         onPressed: () async {
-                          if (await canLaunchUrl(urlYoutub)) {
-                            await launchUrl(urlYoutub,
+                          if (await canLaunchUrl(urlYoutube)) {
+                            await launchUrl(urlYoutube,
                                 mode: LaunchMode.inAppWebView);
                           }
                         },
@@ -256,8 +256,8 @@ class DrawerScreen extends StatelessWidget {
                         )),
                     IconButton(
                         onPressed: () async {
-                          if (await canLaunchUrl(urlTwiter)) {
-                            await launchUrl(urlTwiter,
+                          if (await canLaunchUrl(urlTwitter)) {
+                            await launchUrl(urlTwitter,
                                 mode: LaunchMode.inAppWebView);
                           }
                         },

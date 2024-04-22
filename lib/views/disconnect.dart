@@ -15,7 +15,6 @@ class Disconnect extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              //TODO: fix offline-concept-illustration_114360-7063 add it in the image file
               SvgPicture.asset(
                   "assets/icons/No connection-pana (1).svg"),
               height16,

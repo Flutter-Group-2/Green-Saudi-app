@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localization/flutter_localization.dart';
-import 'package:green_saudi_app/locators/data_injection.dart';
 import 'package:green_saudi_app/resources/localization/localization.dart';
 import 'package:green_saudi_app/resources/utils/colors.dart';
 import 'package:green_saudi_app/resources/utils/spacing.dart';
-import 'package:green_saudi_app/service/supabase_services.dart';
 import 'package:green_saudi_app/views/Drawer/view/drawer_view.dart';
 import 'package:green_saudi_app/widgets/golas_widget.dart';
 import 'package:green_saudi_app/widgets/slider_widget.dart';

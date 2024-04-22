@@ -183,10 +183,10 @@ class _AddEventState extends State<AddEvent> {
               ),
               SizedBox(
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     Padding(
-                      padding: const EdgeInsets.only(left: 30),
+                      padding: const EdgeInsets.only(left: 0),
                       child: Container(
                         width: 150,
                         height: 60,
@@ -194,9 +194,7 @@ class _AddEventState extends State<AddEvent> {
                             border: Border.all(color: black),
                             color: Theme.of(context).primaryColor,
                             borderRadius: BorderRadius.circular(40)),
-                        child: const Center(
-                          child: DatePickerWidget(),
-                        ),
+                        child: const DatePickerWidget(),
                       ),
                     ),
                     Container(
@@ -217,7 +215,7 @@ class _AddEventState extends State<AddEvent> {
               ),
               height16,
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Text(AppLocale.from.getString(context),
                       style: const TextStyle(fontSize: 20)),
@@ -227,7 +225,7 @@ class _AddEventState extends State<AddEvent> {
               ),
               SizedBox(
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     Padding(
                       padding: const EdgeInsets.only(left: 30),

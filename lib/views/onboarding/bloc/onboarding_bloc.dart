@@ -6,7 +6,6 @@ part 'onboarding_event.dart';
 part 'onboarding_state.dart';
 
 class OnboardingBloc extends Bloc<OnboardingEvent, OnboardingState> {
-  // List<Onboarding> onboardingItems = [];
   OnboardingBloc(List<Onboarding> onboardingItems)
       : super(OnboardingInitial(onboardingItems: onboardingItems)) {
     on<NextViewEvent>(

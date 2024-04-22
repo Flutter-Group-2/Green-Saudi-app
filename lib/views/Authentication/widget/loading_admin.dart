@@ -7,10 +7,10 @@ class FutureDelayedAdmin extends StatefulWidget {
   const FutureDelayedAdmin({super.key});
 
   @override
-  _FutureDelayedAdminState createState() => _FutureDelayedAdminState();
+  FutureDelayedAdminState createState() => FutureDelayedAdminState();
 }
 
-class _FutureDelayedAdminState extends State<FutureDelayedAdmin> {
+class FutureDelayedAdminState extends State<FutureDelayedAdmin> {
  
   @override
   void initState() {

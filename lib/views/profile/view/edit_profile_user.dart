@@ -197,7 +197,7 @@ class _EditProfileUserState extends State<EditProfileUser> {
                       color: green, borderRadius: BorderRadius.circular(30)),
                   child: Center(
                       child: Text(
-                    "حفظ",
+                    AppLocale.save.getString(context),
                     style: TextStyle(
                         color: pureWhite,
                         fontWeight: FontWeight.bold,

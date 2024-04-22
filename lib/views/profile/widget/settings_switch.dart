@@ -22,9 +22,9 @@ class SettingsSwitch extends StatefulWidget {
   @override
   State<SettingsSwitch> createState() => _SettingsSwitchState();
 }
-    bool isSwitched = true;
-    bool isSwitchedTo = true;
 
+bool isSwitched = true;
+bool isSwitchedTo = true;
 
 class _SettingsSwitchState extends State<SettingsSwitch> {
   @override
@@ -43,17 +43,23 @@ class _SettingsSwitchState extends State<SettingsSwitch> {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Icon(widget.icon,color: pureWhite,),
-            Text(widget.title,style: TextStyle(color: pureWhite,fontWeight: FontWeight.bold,fontSize: 24),),
+            Icon(
+              widget.icon,
+              color: pureWhite,
+            ),
+            Text(
+              widget.title,
+              style: TextStyle(
+                  color: pureWhite, fontWeight: FontWeight.bold, fontSize: 24),
+            ),
             widget.isDarkMode
                 ? CustomSwitchDarkMode(
-                    value:  GetIt.I.get<AppearanceServices>().currentTheme != 'Dark',
+                    value: GetIt.I.get<AppearanceServices>().currentTheme !=
+                        'Dark',
                     onChanged: (value) {
                       setState(() {
                         isSwitched = value;
-                        bloc.add(UpdateThemeEvent(
-                          isDark: !value
-                        ));
+                        bloc.add(UpdateThemeEvent(isDark: !value));
                         bloc.add(GetThemeEvent());
                       });
                     },

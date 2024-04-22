@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localization/flutter_localization.dart';
 import 'package:green_saudi_app/locators/data_injection.dart';
@@ -97,7 +96,6 @@ class OTPView extends StatelessWidget {
                           build: (BuildContext context, double time) => Expanded(
                             child: Text(
                               '${AppLocale.timer.getString(context)} ${time.toInt()} ${AppLocale.second.getString(context)}',
-                              // 'إعادة رمز التحقق بعد ${time.toInt()} ثانية',
                               style: TextStyle(fontSize: 14, color: green),
                             ),
                           ),
@@ -135,9 +133,7 @@ class OTPView extends StatelessWidget {
                     height40,
                     ElevatedButton(
                       onPressed: () {
-                      print("=========================");
-                      print(serviceLocator.otpToken);
-                      print("=========================");
+                     
                       context
                           .read<AuthBloc>()
                           .add(VerifyOtpEvent(otpToken: serviceLocator.otpToken));

@@ -60,21 +60,16 @@ class HistoryEventView extends StatelessWidget {
                         itemCount: 4,
                         shrinkWrap: true,
                         itemBuilder: (context, index) {
-                          return HistoryShimmer();
+                          return const HistoryShimmer();
                         });
                   } else if (state is HistoryLoadedState) {
                     return ListView.builder(
                         itemCount: 4,
-                       // state.history.length,
                         shrinkWrap: true,
                         itemBuilder: (context, index) {
-                           return HistoryHoursWidget();
-                         /* return HistoryWidget(
-                            personalEvent: state.history[index],
-                          );*/
+                           return const HistoryHoursWidget();
                         });
                   } else {
-                    //TODO: NO histroy img or messge
                     return Center(
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -89,7 +84,6 @@ class HistoryEventView extends StatelessWidget {
                       ),
                     );
 
-                    //");
                   }
                 },
               ),

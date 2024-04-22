@@ -48,7 +48,7 @@ class OnboardingView extends StatelessWidget {
             precacheImage(AssetImage(item.image), context);
           }
           precacheImage(
-              AssetImage("assets/images/background_img_1.png"), context);
+              const AssetImage("assets/images/background_img_1.png"), context);
           return Scaffold(
             body: PageView.builder(
               onPageChanged: (index) {
@@ -89,7 +89,7 @@ class OnboardingView extends StatelessWidget {
                                 child: TextButton(
                                   onPressed: () {
                                     context.push(
-                                        view: LoginView(), isPush: false);
+                                        view: const LoginView(), isPush: false);
                                   },
                                   child: Text(
                                     AppLocale.skip.getString(context),

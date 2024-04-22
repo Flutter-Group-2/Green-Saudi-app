@@ -44,7 +44,6 @@ class _LoginViewState extends State<LoginView> {
               body: BlocConsumer<AuthBloc, AuthState>(
                 listener: (context, state) {
                   if (state is AuthLoginSuccessState) {
-                  //  context.getMessagesBar(msg: state.message, color: green);
                     bloc.add(CheckSessionAvailability());
                   } else if (state is SessionAvailabilityState) {
                     context.push(view: state.page, isPush: false);
@@ -53,7 +52,6 @@ class _LoginViewState extends State<LoginView> {
                   }
                 },
                 builder: (context, state) {
-                // if (state is AuthLoadingState) {}
                   return Container(
                     decoration: const BoxDecoration(
                       image: DecorationImage(

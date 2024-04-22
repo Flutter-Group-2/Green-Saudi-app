@@ -88,6 +88,7 @@ class EventsAdminPage extends StatelessWidget {
                     );
                   },
                 );
+                
               } else {
                 return Center(
                   child: Column(
@@ -103,17 +104,20 @@ class EventsAdminPage extends StatelessWidget {
                   ),
                 );
               }
+              
             },
+            
           ),
         ),
+        
         floatingActionButton: FloatingActionButton(
           onPressed: () {
             context.push(view: const AddEvent(), isPush: false);
           },
-          backgroundColor: green, // Set your desired background color
-          child: const Icon(
+          backgroundColor: grey, 
+          child:  Icon(
             Icons.add,
-            color: Colors.white,
+            color: Colors.grey[600],
           ),
         ),
       ),

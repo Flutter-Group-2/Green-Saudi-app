@@ -61,7 +61,7 @@ class TextProfile extends StatelessWidget {
                 icon,
               ),
               width16,
-              Container(
+              SizedBox(
                 width: 250,
                 child: Text(
                   data,

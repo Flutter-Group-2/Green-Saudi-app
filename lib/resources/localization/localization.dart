@@ -39,8 +39,8 @@ mixin AppLocale {
   static const String resend = 'resend';
   static const String sendOTP = 'sendOTP';
   static const String resetPasswordHint = "Enter New Password";
-  
-  //sultan
+
+  //Home
   static const String homePage = 'homePage';
   static const String pointPage = 'pointPage';
   static const String eventPage = 'eventPage';
@@ -85,9 +85,12 @@ mixin AppLocale {
   static const String saudi = 'Green Saudi';
   static const String signOutMsg = 'sign Out';
   static const String yes = 'Yes';
-  static const String no = 'no'; 
-  static const String noReward = 'No Reward'; 
+  static const String no = 'no';
+  static const String noReward = 'No Reward';
   static const String noHistory = 'No History';
+  static const String save = 'Save';
+  static const String arabic = 'Arabic';
+
   //Admin
   static const String controlPanel = 'ControlPanel';
   static const String eventsAdmin = 'Events';
@@ -112,10 +115,10 @@ mixin AppLocale {
   static const String supervisorsCity = 'City';
   static const String time = 'Time';
   static const String addReword = 'addReword';
-  static const String ok ='ok';
-  static const String deleteQrCode ='DeleteQr';
-          
-
+  static const String ok = 'ok';
+  static const String deleteQrCode = 'Delete Qr Code';
+  static const String scanQrCode = 'scanQrCode';
+  static const String letsScan = 'letsScan';
 
   //profile
   static const String userName = 'jj';
@@ -139,7 +142,7 @@ mixin AppLocale {
   static const String chooseLanguage = 'chooseLanguage';
   static const String listCity = "listCity";
   static const String addEvent = "AddEvent";
-  static const String changeLanguage = 'ChangeLanguage'; 
+  static const String changeLanguage = 'ChangeLanguage';
 
   static const Map<String, dynamic> EN = {
     // Onboarding
@@ -203,8 +206,9 @@ mixin AppLocale {
     languageButton: 'Language',
     logoutButton: 'Logout',
     editProfile: 'Edit Profile',
-    changeLanguage : 'Change Language',
-    
+    changeLanguage: 'Change Language',
+    scanQrCode: 'Scan QR Code',
+
     // USER
     homePage: 'Home',
     pointPage: 'Reward',
@@ -243,13 +247,14 @@ mixin AppLocale {
     region11: 'Al-Baha',
     region12: 'Al-Jawf',
     region13: 'Jazan',
-    vision :'Our Vision',
-    saudi :'Green Saudi',
-    signOutMsg :'Are you sure you want to log out?',
-    yes : 'Log Out',
-    no : 'Cancel',
+    vision: 'Our Vision',
+    saudi: 'Green Saudi',
+    signOutMsg: 'Are you sure you want to log out?',
+    yes: 'Log Out',
+    no: 'Cancel',
     noHistory: 'No Data',
-    noReward :'No Reward',
+    noReward: 'No Reward',
+    arabic: 'Arabic',
     //Admin
     controlPanel: 'Control Panel',
     eventsAdmin: 'Events',
@@ -275,10 +280,11 @@ mixin AppLocale {
     addReword: 'Add Reword',
     rewordAdmin: 'Reword',
     companyName: 'Company Name',
-    ok :'Ok',
-    lightMode : 'Light Mode',
-        deleteQrCode :'Delete Qr Code',
-
+    ok: 'Ok',
+    lightMode: 'Light Mode',
+    deleteQrCode: 'Delete Qr Code',
+    save: 'Save',
+    letsScan: 'letsScan',
   };
   static const Map<String, dynamic> AR = {
     // Onboarding and Auth
@@ -346,7 +352,7 @@ mixin AppLocale {
     languageButton: 'اللغة',
     logoutButton: 'تسجيل الخروج',
     editProfile: 'تعديل الملف الشخصي',
-    changeLanguage : 'تغيير اللغة',
+    changeLanguage: 'تغيير اللغة',
 
     // User
     homePage: 'الرئيسية',
@@ -410,11 +416,15 @@ mixin AppLocale {
     addEvent: "أضف حدث",
     addReword: 'أضف مكآفأة',
     companyName: 'إسم الشركة',
-    ok :'تأكيد',
-    lightMode : 'الوضع الفاتح',
+    ok: 'تأكيد',
+    lightMode: 'الوضع الفاتح',
     signOutMsg: 'هل أنت متأكد أنك تريد تسجيل الخروج؟',
     yes: 'تسجيل الخروج',
     no: 'إلغاء',
-    deleteQrCode :'امسح الباركود',
+    deleteQrCode: 'امسح الباركود',
+    save: 'حفظ',
+    arabic: 'العربية',
+    scanQrCode: 'QR مسح',
+    letsScan: 'لنقم بالمسح',
   };
 }

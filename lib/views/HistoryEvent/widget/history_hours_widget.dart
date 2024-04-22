@@ -6,7 +6,7 @@ import 'package:green_saudi_app/resources/utils/colors.dart';
 import 'package:green_saudi_app/resources/utils/spacing.dart';
 
 class HistoryHoursWidget extends StatelessWidget {
-  const HistoryHoursWidget({Key? key});
+  const HistoryHoursWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +20,7 @@ class HistoryHoursWidget extends StatelessWidget {
       ]),
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.waiting) {
-          return SizedBox();
+          return const SizedBox();
         } else if (snapshot.hasError) {
           return Text('Error: ${snapshot.error}');
         } else {
@@ -60,7 +60,7 @@ class HistoryHoursWidget extends StatelessWidget {
                         ),
                         Text(
                           eventLocation,
-                          style: TextStyle(
+                          style: const TextStyle(
                             color: Color.fromRGBO(240, 248, 255, 0.691),
                             fontWeight: FontWeight.normal,
                             fontSize: 12,

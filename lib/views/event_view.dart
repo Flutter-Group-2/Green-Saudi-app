@@ -20,7 +20,6 @@ class EventView extends StatelessWidget {
   Widget build(BuildContext context) {
     context.read<EventBloc>().add(EventLoadEvent());
     final TextEditingController controller = TextEditingController();
-    // All 13 Regions
     final List<String> regionsList = [
       AppLocale.region1.getString(context),
       AppLocale.region2.getString(context),
@@ -66,12 +65,10 @@ class EventView extends StatelessWidget {
                 Expanded(
                   child: TextField(
                     controller: controller,
-                    // textDirection: TextDirection.rtl,
                     decoration: InputDecoration(
                       fillColor: Theme.of(context).scaffoldBackgroundColor,
                       filled: true,
                       hintText: AppLocale.hintSearch.getString(context),
-                      // hintTextDirection: TextDirection.rtl,
                       prefixIcon: Padding(
                         padding: const EdgeInsets.all(16.0),
                         child: SvgPicture.asset(
@@ -102,6 +99,7 @@ class EventView extends StatelessWidget {
                   child: Center(
                     child: SvgPicture.asset(
                       'assets/icons/search.svg',
+                      // ignore: deprecated_member_use
                       color: white,
                     ),
                   ),
@@ -152,7 +150,6 @@ class EventView extends StatelessWidget {
                         );
                       });
                 } else {
-                  //TODO: NO Event img or messge
                   return Center(
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,

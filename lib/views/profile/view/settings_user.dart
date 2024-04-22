@@ -132,7 +132,9 @@ class SettingsUser extends StatelessWidget {
                       actions: <Widget>[
                         TextButton(
                           onPressed: () => cubit.changeLanguage("ar"),
-                          child:  Text('العربية',style: TextStyle(color: Theme.of(context).unselectedWidgetColor),),
+                          child:  Text(
+                            AppLocale.arabic.getString(context),
+                          style: TextStyle(color: Theme.of(context).unselectedWidgetColor),),
                         ),
                         TextButton(
                           onPressed: () => cubit.changeLanguage("en"),

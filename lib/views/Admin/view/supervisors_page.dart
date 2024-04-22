@@ -10,6 +10,32 @@ class SupervisorsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    List supervisorsInfo =[
+      {
+      'name':"Abdulwahab",
+      'city':"Eastern",},
+      {
+      'name':"mohammed",
+      'city':"Al-Baha",},
+      {
+      'name':"saad",
+      'city':"Makkah",},
+      {
+      'name':"sultan",
+      'city':"Riyadh",},
+      {
+      'name':"khalid",
+      'city':"Al-Madinah",},
+      {
+      'name':"mohammed",
+      'city':"Tabuk",},
+      {
+      'name':"saud",
+      'city':"Makkah",},
+      {
+      'name':"mohammed",
+      'city':"Makkah",},
+      ];
     return Scaffold(
       backgroundColor: Theme.of(context).scaffoldBackgroundColor,
       appBar: AppBar(
@@ -42,7 +68,7 @@ class SupervisorsPage extends StatelessWidget {
         height: context.getHeight(),
         child: ListView.builder(
           scrollDirection: Axis.vertical,
-          itemCount: 7,
+          itemCount: supervisorsInfo.length,
           itemBuilder: (BuildContext context, int index) {
             return Padding(
               padding: const EdgeInsets.all(15),
@@ -52,27 +78,27 @@ class SupervisorsPage extends StatelessWidget {
                 height: 60,
                 width: 356,
                 child:  Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
+                  mainAxisAlignment: MainAxisAlignment.start,
                   children: [
+                    const Padding(
+                      padding: EdgeInsets.only(right: 10),
+                      child: CircleAvatar(
+                        backgroundImage:
+                            AssetImage("assets/images/adminlogo.png"),
+                      ),
+                    ),
                     Padding(
                       padding: const EdgeInsets.only(right: 10),
                       child: Text(
-                        AppLocale.supervisorsName.getString(context),
+                        "${AppLocale.supervisorsName.getString(context)} :${supervisorsInfo[index]['name']}",
                         style:const TextStyle(fontSize: 20, color: Colors.white),
                       ),
                     ),
                     Padding(
                       padding: const EdgeInsets.only(right: 10),
                       child: Text(
-                        AppLocale.supervisorsCity.getString(context),
+                        "${AppLocale.supervisorsCity.getString(context)} :${supervisorsInfo[index]['city']}",
                         style: const TextStyle(fontSize: 20, color: Colors.white),
-                      ),
-                    ),
-                    const Padding(
-                      padding: EdgeInsets.only(right: 10),
-                      child: CircleAvatar(
-                        backgroundImage:
-                            AssetImage("assets/images/adminlogo.png"),
                       ),
                     ),
                   ],

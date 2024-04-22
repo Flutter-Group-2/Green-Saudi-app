@@ -20,7 +20,6 @@ class SignUpView extends StatefulWidget {
 class _SignUpViewState extends State<SignUpView> {
   @override
   void dispose() {
-    // TODO: implement
     nameController.dispose();
     emailController.dispose();
     phoneController.dispose();

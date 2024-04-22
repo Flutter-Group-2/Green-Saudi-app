@@ -115,7 +115,7 @@ class EventDetailsView extends StatelessWidget {
                                 mode: LaunchMode.inAppWebView);
                           }
                         },
-                  backgroundColor: green, // Set your desired background color
+                  backgroundColor: green, 
                   child: const Icon(
                     Icons.location_on,
                     color: Colors.white,

@@ -10,10 +10,10 @@ class FutureDelayedWidget extends StatefulWidget {
   const FutureDelayedWidget({super.key});
 
   @override
-  _FutureDelayedWidgetState createState() => _FutureDelayedWidgetState();
+  FutureDelayedWidgetState createState() => FutureDelayedWidgetState();
 }
 
-class _FutureDelayedWidgetState extends State<FutureDelayedWidget> {
+class FutureDelayedWidgetState extends State<FutureDelayedWidget> {
     final serviceLocator = DataInjection().locator.get<DBServices>();
 
   @override

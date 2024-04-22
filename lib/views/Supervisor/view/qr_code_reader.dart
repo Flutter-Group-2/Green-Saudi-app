@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_localization/flutter_localization.dart';
 import 'package:get_it/get_it.dart';
+import 'package:green_saudi_app/resources/localization/localization.dart';
 import 'package:green_saudi_app/resources/utils/colors.dart';
 import 'package:green_saudi_app/resources/utils/spacing.dart';
 import 'package:green_saudi_app/service/supabase_services.dart';
@@ -26,8 +28,9 @@ class ScanView extends StatelessWidget {
               ),
             ],
             title: Text(
-              //TODO: localizition
-              'مسح الباركود',
+              AppLocale.scanQrCode.getString(context),
+     
+              
               style: TextStyle(
                 color: white,
               ),
@@ -53,8 +56,7 @@ class ScanView extends StatelessWidget {
                               height: 175,
                             ),
                             Text(
-                              //TODO: localizition
-                              "لنقم بالمسح",
+                              AppLocale.letsScan.getString(context),
                               style: TextStyle(
                                 color: green,
                                 fontSize: 30,
@@ -72,7 +74,8 @@ class ScanView extends StatelessWidget {
                                       addVolunteerHour: 8,
                                       volunteerID: state.qrString);
                                 },
-                                child: Text("ممتاز"))
+                                
+                                child: Text(AppLocale.ok.getString(context),))
                           ],
                           title: Text("تم تسجيل الحضور"),
                         );
@@ -123,8 +126,8 @@ class ScanView extends StatelessWidget {
                   TextButton(
                     onPressed: () {
                       BlocProvider.of<SupervisorBloc>(context).add(ScanQR());
-                    }, //TODO: localizition
-                    child: Text("امسح الباركود"),
+                    }, 
+                    child: Text(AppLocale.scanQrCode.getString(context),),
                   ),
                 ],
               ),
