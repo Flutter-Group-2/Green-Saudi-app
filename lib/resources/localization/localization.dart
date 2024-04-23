@@ -103,6 +103,7 @@ mixin AppLocale {
   static const String from = 'From';
   static const String to = 'To';
   static const String location = 'location';
+  static const String  locationUrl = 'locationUrl';
   static const String maximumCapacity = 'maximumCapacity';
   static const String addIt = 'Add';
   static const String cancel = 'Cancel';
@@ -278,6 +279,7 @@ mixin AppLocale {
     ok :'Ok',
     lightMode : 'Light Mode',
         deleteQrCode :'Delete Qr Code',
+        locationUrl : 'locationUrl',
 
   };
   static const Map<String, dynamic> AR = {
@@ -416,5 +418,6 @@ mixin AppLocale {
     yes: 'تسجيل الخروج',
     no: 'إلغاء',
     deleteQrCode :'امسح الباركود',
+    locationUrl : 'رابط الموقع',
   };
 }
